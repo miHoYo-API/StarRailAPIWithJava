@@ -18,7 +18,6 @@ public class Sample {
 
         System.out.println("\n----- Characters -----\n");
 
-
         for (final jsonObject.Characters character : result.characters){
             System.out.println("Name: " + character.name);
             System.out.println("Level: " + character.level);

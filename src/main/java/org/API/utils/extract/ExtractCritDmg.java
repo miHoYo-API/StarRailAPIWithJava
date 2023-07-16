@@ -3,8 +3,12 @@ package org.API.utils.extract;
 import org.API.core.JsonObject;
 import org.API.utils.extract.core.Extract;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class ExtractCritDmg implements Extract {
     private final JsonObject.Characters character;
+    private Object[] a;
 
     public ExtractCritDmg(JsonObject.Characters character) {
         this.character = character;
@@ -17,11 +21,7 @@ public class ExtractCritDmg implements Extract {
 
     @Override
     public double status() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("crit_dmg")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.attributes.stream().filter(s -> s.field.equals("crit_dmg")).toList().get(0).value;
     }
 
     @Override
@@ -32,10 +32,6 @@ public class ExtractCritDmg implements Extract {
 
     @Override
     public double relic() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("crit_rate")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.additions.stream().filter(s -> s.field.equals("crit_dmg")).toList().get(0).value;
     }
 }

@@ -18,11 +18,7 @@ public class ExtractSPD implements Extract {
 
     @Override
     public double status() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("spd")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.attributes.stream().filter(s -> s.field.equals("spd")).toList().get(0).value;
     }
 
     @Override
@@ -32,10 +28,6 @@ public class ExtractSPD implements Extract {
 
     @Override
     public double relic() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("spd")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.additions.stream().filter(s -> s.field.equals("spd")).toList().get(0).value;
     }
 }

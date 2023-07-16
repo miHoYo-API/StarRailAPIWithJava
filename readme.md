@@ -1,5 +1,7 @@
-<div align="center"><h1>Java Star rail API</h1></div>
-<div align="right"><p>2.0.0 ver</p></div>
+<div align="center">
+    <h1>Java Star rail API</h1>
+    <p>2.0.0 version</p>
+</div>
 
 # Requirements
 - [jackson-core](https://github.com/FasterXML/jackson)
@@ -7,7 +9,7 @@
 - [json](https://mvnrepository.com/artifact/org.json/json/20190722)
 
 
-# [Sample Code]()
+# [Sample Code](https://github.com/wuliao97/StarrailAPI-With-Java/blob/master/src/main/java/org/examples/CharacterInfo.java)
 ```Java
 package org.examples;
 

@@ -18,7 +18,8 @@ public class MihomoAPI {
     private final Languages languages;
 
     public MihomoAPI() {
-        this(null, Languages.jp);
+        this.UID = null;
+        this.languages = Languages.jp;
     }
 
     public MihomoAPI(Languages languages) {

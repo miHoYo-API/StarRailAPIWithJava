@@ -17,11 +17,7 @@ public class ExtractDEF implements Extract {
 
     @Override
     public double status() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("def")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.attributes.stream().filter(s -> s.field.equals("def")).toList().get(0).value;
     }
 
     @Override
@@ -31,10 +27,6 @@ public class ExtractDEF implements Extract {
 
     @Override
     public double relic() {
-        for (final var i : this.character.additions) {
-            if (!i.field.equals("def")) continue;
-            return i.value;
-        }
-        return 0.;
+        return this.character.additions.stream().filter(s -> s.field.equals("def")).toList().get(0).value;
     }
 }

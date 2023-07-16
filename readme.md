@@ -1,3 +1,6 @@
+<div align="center"><h1>Star rail API with Java</h1></div>
+<div align="center">VERSION 1.0.0</div>
+
 # Requirements
 - jackson-core
 - jackson-databind

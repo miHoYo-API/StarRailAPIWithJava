@@ -2,7 +2,7 @@ package org.API.core;
 
 import java.util.List;
 
-public class jsonObject {
+public class JsonObject {
 
     public Player player;
     public static class Player {

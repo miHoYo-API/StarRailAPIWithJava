@@ -1,16 +1,18 @@
-package org.API;
+package org.examples;
 
+import org.API.core.Languages;
 import org.API.core.MihomoAPI;
-import org.API.core.jsonObject;
+import org.API.core.MihomoAPI.*;
+import org.API.core.JsonObject;
 
 import java.io.IOException;
 
 public class Sample {
     public static void main(String[] args) throws IOException, InterruptedException {
-        MihomoAPI mihomoAPI = new MihomoAPI();
-        mihomoAPI.setUID("801671759");
+        MihomoAPI mihomoAPI = new MihomoAPI("801671759", Languages.jp);
 
-        jsonObject result = mihomoAPI.getResult();
+        JsonObject result = mihomoAPI.getResult();
+        System.out.println("URL: " + mihomoAPI.getUrl());
         System.out.println("UID: " + result.player.uid);
         System.out.println("NickName: " + result.player.nickname);
         System.out.println("Icon: " + mihomoAPI.getIconUrl(result.player.avatar.icon));
@@ -18,7 +20,7 @@ public class Sample {
 
         System.out.println("\n----- Characters -----\n");
 
-        for (final jsonObject.Characters character : result.characters){
+        for (final JsonObject.Characters character : result.characters){
             System.out.println("Name: " + character.name);
             System.out.println("Level: " + character.level);
 

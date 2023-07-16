@@ -1,12 +1,9 @@
 package org.API.core;
 
-import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.json.JSONObject;
 
-import java.io.DataInput;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -60,12 +57,12 @@ public class MihomoAPI {
         return new JSONObject(response.body());
     }
 
-    public jsonObject getResult() throws IOException, InterruptedException {
+    public JsonObject getResult() throws IOException, InterruptedException {
         String connect = connect().toString();
         ObjectMapper objectMapper = new ObjectMapper();
 
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        return objectMapper.readValue(connect, jsonObject.class);
+        return objectMapper.readValue(connect, JsonObject.class);
     }
 
     public String getIconUrl(final String icon) {

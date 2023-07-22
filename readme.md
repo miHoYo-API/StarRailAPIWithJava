@@ -26,8 +26,8 @@ public class CharacterInfo {
         JsonObject result = api.getResult();
 
         for (final JsonObject.Characters character : result.characters) {
-            System.out.println("Name:" + character.name);
-            System.out.println("HP:" + Utils.extractHP(character));
+            System.out.println("Name :" + character.name);
+            System.out.println("HP: " + Utils.extractHP(character));
             System.out.println("ATK: " + Utils.extractATK(character));
             System.out.println("DEF: " + Utils.extractDEF(character));
             System.out.println("SPD: " + Utils.extractSPD(character));
@@ -37,7 +37,6 @@ public class CharacterInfo {
         }
     }
 }
-
 ```
 
 # output

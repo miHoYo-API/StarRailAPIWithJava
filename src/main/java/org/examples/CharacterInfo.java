@@ -20,6 +20,7 @@ public class CharacterInfo {
             System.out.println("SPD: " + Utils.extractSPD(character));
             System.out.println("CRIT RATE: " + Utils.extractCritRate(character) * 100);
             System.out.println("CRIT DMG: " + Utils.extractCritDmg(character) * 100);
+
             System.out.println("--------------------");
         }
     }

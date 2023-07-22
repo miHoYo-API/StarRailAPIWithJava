@@ -90,7 +90,7 @@ public class JsonObject {
             public String icon;
         }
 
-        public List<SkillTrees> skillTrees;
+        public List<SkillTrees> skill_trees;
         public static class SkillTrees {
             public String id;
             public int level;

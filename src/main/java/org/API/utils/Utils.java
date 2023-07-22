@@ -20,7 +20,6 @@ public class Utils {
         return (int) new ExtractSPD(character).TotalValue();
     }
 
-
     public static double extractCritRate(final JsonObject.Characters character) {
         return new ExtractCritRate(character).TotalValue();
     }
